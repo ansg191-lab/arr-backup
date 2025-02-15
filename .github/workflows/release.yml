@@ -23,7 +23,7 @@ defaults:
 jobs:
   upload-assets:
     name: ${{ matrix.target }}
-    if: github.repository_owner == 'ansg191'
+    if: github.repository_owner == 'ansg191-lab'
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
