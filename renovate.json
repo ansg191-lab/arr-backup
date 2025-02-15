@@ -6,6 +6,5 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "platformCommit": "enabled",
-  "rebaseWhen": "behind-base-branch",
   "semanticCommits": "enabled"
 }
