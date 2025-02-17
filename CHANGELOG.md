@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5](https://github.com/ansg191-lab/arr-backup/compare/v0.1.4...v0.1.5) - 2025-02-17
+
+### Other
+
+- *(deps)* remove unneeded options from renovate
+- Fix alpine package versions
+- Use renovate to manage alpine packages
+
 ## [0.1.4](https://github.com/ansg191-lab/arr-backup/compare/v0.1.3...v0.1.4) - 2025-02-15
 
 ### Other
