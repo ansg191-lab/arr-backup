@@ -1,11 +1,19 @@
 ################################################################################
 # Create a stage for building the application.
 
-FROM --platform=$BUILDPLATFORM rust:1.84.1-alpine@sha256:12360d0b997278c4bc8ccde026dba3260ccc8320352f71392680a4c5dd1fc824 AS build
+FROM --platform=$BUILDPLATFORM rust:1.84.1-alpine3.21 AS build
 WORKDIR /app
 
+# renovate: datasource=repology depName=alpine_3_31/zig versioning=loose
+ENV ZIG_VERSION="0.13.0-r1"
+# renovate: datasource=repology depName=alpine_3_31/musl-dev versioning=loose
+ENV MUSL_DEV_VERSION="1.2.5-r9"
+
 # Install deps
-RUN apk add --no-cache clang lld musl-dev git zig && \
+RUN apk add --no-cache \
+    	musl-dev=${MUSL_DEV_VERSION} \
+    	zig=${ZIG_VERSION} \
+    && \
     cargo install --locked cargo-zigbuild && \
     rustup target add x86_64-unknown-linux-musl aarch64-unknown-linux-musl
 
