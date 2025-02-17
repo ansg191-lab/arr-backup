@@ -4,9 +4,9 @@
 FROM --platform=$BUILDPLATFORM rust:1.84.1-alpine3.21 AS build
 WORKDIR /app
 
-# renovate: datasource=repology depName=alpine_3_31/zig versioning=loose
+# renovate: datasource=repology depName=alpine_3_21/zig versioning=loose
 ENV ZIG_VERSION="0.13.0-r1"
-# renovate: datasource=repology depName=alpine_3_31/musl-dev versioning=loose
+# renovate: datasource=repology depName=alpine_3_21/musl-dev versioning=loose
 ENV MUSL_DEV_VERSION="1.2.5-r9"
 
 # Install deps
