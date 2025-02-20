@@ -4,7 +4,7 @@ use anyhow::{Context, Result};
 use tracing::{debug, error, info};
 use tracing_forest::ForestLayer;
 use tracing_subscriber::{
-    layer::SubscriberExt, util::SubscriberInitExt, EnvFilter, Layer, Registry,
+    EnvFilter, Layer, Registry, layer::SubscriberExt, util::SubscriberInitExt,
 };
 use zip::result::ZipError;
 

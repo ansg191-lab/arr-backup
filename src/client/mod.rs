@@ -5,9 +5,9 @@ use http::{HeaderValue, Request, Response};
 use time::OffsetDateTime;
 use tracing::{debug, error, info};
 use ureq::{
+    Agent, AsSendBody, Body,
     config::AutoHeaderValue,
     tls::{RootCerts, TlsConfig},
-    Agent, AsSendBody, Body,
 };
 
 mod backup;
