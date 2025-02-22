@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.6](https://github.com/ansg191-lab/arr-backup/compare/v0.1.5...v0.1.6) - 2025-02-22
+
+### Fixed
+
+- *(ci)* remove riscv64gc-unknown-linux-musl
+
 ## [0.1.5](https://github.com/ansg191-lab/arr-backup/compare/v0.1.4...v0.1.5) - 2025-02-22
 
 ### Added
