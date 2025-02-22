@@ -13,11 +13,14 @@ ENV ZIGBUILD_VERSION="0.19.8"
 
 # Install deps
 RUN apk add --no-cache \
-    	musl-dev=${MUSL_DEV_VERSION} \
-    	zig=${ZIG_VERSION} \
+        musl-dev=${MUSL_DEV_VERSION} \
+        zig=${ZIG_VERSION} \
     && \
     cargo install --locked cargo-zigbuild@${ZIGBUILD_VERSION} && \
-    rustup target add x86_64-unknown-linux-musl aarch64-unknown-linux-musl
+    rustup target add \
+        x86_64-unknown-linux-musl \
+        aarch64-unknown-linux-musl \
+        riscv64gc-unknown-linux-musl
 
 # Build the application.
 # Leverage a cache mount to /usr/local/cargo/registry/
@@ -33,10 +36,14 @@ RUN --mount=type=bind,source=src,target=src \
     --mount=type=cache,target=/app/target/ \
     --mount=type=cache,target=/usr/local/cargo/git/db \
     --mount=type=cache,target=/usr/local/cargo/registry/ \
-    cargo zigbuild --release --target x86_64-unknown-linux-musl --target aarch64-unknown-linux-musl && \
+    cargo zigbuild --release \
+       --target x86_64-unknown-linux-musl \
+       --target aarch64-unknown-linux-musl \
+       --target riscv64gc-unknown-linux-musl && \
     mkdir /app/linux && \
     cp target/aarch64-unknown-linux-musl/release/arr-backup /app/linux/arm64 && \
-    cp target/x86_64-unknown-linux-musl/release/arr-backup /app/linux/amd64
+    cp target/x86_64-unknown-linux-musl/release/arr-backup /app/linux/amd64 && \
+    cp target/riscv64gc-unknown-linux-musl/release/arr-backup /app/linux/riscv64
 
 ################################################################################
 FROM alpine:3.21@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c AS final
