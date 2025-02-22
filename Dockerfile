@@ -8,13 +8,15 @@ WORKDIR /app
 ENV ZIG_VERSION="0.13.0-r1"
 # renovate: datasource=repology depName=alpine_3_21/musl-dev versioning=loose
 ENV MUSL_DEV_VERSION="1.2.5-r9"
+# renovate: datasource=crate depName=cargo-zigbuild versioning=semver
+ENV ZIGBUILD_VERSION="0.19.8"
 
 # Install deps
 RUN apk add --no-cache \
     	musl-dev=${MUSL_DEV_VERSION} \
     	zig=${ZIG_VERSION} \
     && \
-    cargo install --locked cargo-zigbuild && \
+    cargo install --locked cargo-zigbuild@${ZIGBUILD_VERSION} && \
     rustup target add x86_64-unknown-linux-musl aarch64-unknown-linux-musl
 
 # Build the application.
