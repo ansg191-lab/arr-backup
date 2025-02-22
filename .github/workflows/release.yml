@@ -38,8 +38,6 @@ jobs:
             os: windows-2022
           - target: riscv64gc-unknown-linux-gnu
             os: ubuntu-22.04
-          - target: riscv64gc-unknown-linux-musl
-            os: ubuntu-22.04
           - target: x86_64-unknown-linux-gnu
             os: ubuntu-22.04
           - target: x86_64-unknown-linux-musl
