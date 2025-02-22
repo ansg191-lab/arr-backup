@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5](https://github.com/ansg191-lab/arr-backup/compare/v0.1.4...v0.1.5) - 2025-02-22
+
+### Added
+
+- add riscv binary release
+- add riscv64 docker image
+
+### Fixed
+
+- specify zigbuild version for renovate
+- *(docker)* fix rust image digest
+- *(deps)* update rust crate serde to v1.0.218
+
+### Other
+
+- Merge pull request [#74](https://github.com/ansg191-lab/arr-backup/pull/74) from ansg191-lab/renovate/docker-build-push-action-digest
+- *(deps)* update docker/setup-buildx-action digest to f7ce87c
+- *(deps)* update docker/setup-qemu-action digest to 4574d27
+- Revert "ci: switch to multi-runner docker build"
+- *(deps)* update rust docker tag to v1.85.0
+- Merge pull request [#55](https://github.com/ansg191-lab/arr-backup/pull/55) from ansg191-lab/renovate/ureq-3.x-lockfile
+- Merge pull request [#70](https://github.com/ansg191-lab/arr-backup/pull/70) from ansg191-lab/renovate/anyhow-1.x-lockfile
+- *(deps)* remove unneeded options from renovate
+- Fix alpine package versions
+- Use renovate to manage alpine packages
+
 ## [0.1.4](https://github.com/ansg191-lab/arr-backup/compare/v0.1.3...v0.1.4) - 2025-02-15
 
 ### Other
