@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8](https://github.com/ansg191-lab/arr-backup/compare/v0.1.7...v0.1.8) - 2025-03-04
+
+### Fixed
+
+- *(deps)* update rust crate anyhow to v1.0.97
+- *(deps)* update rust crate ureq to v3.0.8
+- *(deps)* update rust crate ureq to v3.0.7
+
+### Other
+
+- Merge pull request [#82](https://github.com/ansg191-lab/arr-backup/pull/82) from ansg191-lab/renovate/docker-build-push-action-digest
+- Merge pull request [#83](https://github.com/ansg191-lab/arr-backup/pull/83) from ansg191-lab/renovate/docker-metadata-action-digest
+- Merge pull request [#84](https://github.com/ansg191-lab/arr-backup/pull/84) from ansg191-lab/renovate/docker-setup-buildx-action-digest
+- Merge pull request [#81](https://github.com/ansg191-lab/arr-backup/pull/81) from ansg191-lab/renovate/zip-2.x-lockfile
+
 ## [0.1.7](https://github.com/ansg191-lab/arr-backup/compare/v0.1.6...v0.1.7) - 2025-02-22
 
 ### Fixed
