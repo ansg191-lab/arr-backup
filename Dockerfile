@@ -1,7 +1,7 @@
 ################################################################################
 # Create a stage for building the application.
 
-FROM --platform=$BUILDPLATFORM rust:1.85.0-alpine3.21@sha256:64d3fbc2db18485ab3a5211d56fec25493c71595e820c486e9b8a8ac9edbc4e8 AS build
+FROM --platform=$BUILDPLATFORM rust:1.85.0-alpine3.21@sha256:bea885d2711087e67a9f7a7cd1a164976f4c35389478512af170730014d2452a AS build
 WORKDIR /app
 
 # renovate: datasource=repology depName=alpine_3_21/zig versioning=loose
