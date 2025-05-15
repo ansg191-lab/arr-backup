@@ -16,4 +16,4 @@ tracing-forest = "0.1.6"
 tracing-panic = "0.1.2"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 ureq = { version = "3.0.5", features = ["json", "platform-verifier"] }
-zip = "2.2.0"
+zip = "3.0.0"
