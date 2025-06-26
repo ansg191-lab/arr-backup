@@ -46,7 +46,7 @@ RUN --mount=type=bind,source=src,target=src \
     cp target/riscv64gc-unknown-linux-musl/release/arr-backup /app/linux/riscv64
 
 ################################################################################
-FROM alpine:3.21@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c AS final
+FROM alpine:3.22@sha256:8a1f59ffb675680d47db6337b49d22281a139e9d709335b492be023728e11715 AS final
 ARG TARGETPLATFORM
 
 # Create a non-privileged user that the app will run under.
