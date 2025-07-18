@@ -9,7 +9,7 @@ ENV ZIG_VERSION="0.13.0-r1"
 # renovate: datasource=repology depName=alpine_3_21/musl-dev versioning=loose
 ENV MUSL_DEV_VERSION="1.2.5-r9"
 # renovate: datasource=crate depName=cargo-zigbuild versioning=semver
-ENV ZIGBUILD_VERSION="0.20.0"
+ENV ZIGBUILD_VERSION="0.20.1"
 
 # Install deps
 RUN apk add --no-cache \
